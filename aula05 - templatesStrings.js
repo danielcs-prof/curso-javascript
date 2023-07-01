@@ -14,8 +14,14 @@ console.log(str1 + nome + str2 + idade + str3 + peso + str4)
 console.log(`O aluno ${nome} completou ${idade} anos e pesa ${peso} kg.`)
 
 // Tagged template strings
-function tag (strings, ...valores){
+function tag0 (strings, ...valores){
     const expr = valores[2]>70 ? " está acima do peso.": " está abaixo do peso.";
     return strings[0] + valores[0] + expr;
 }
-console.log( tag `O aluno ${nome} completou ${idade} anos e pesa ${peso} kg.`)
+console.log( tag0 `O aluno ${nome} completou ${idade} anos e pesa ${peso} kg.`)
+
+function tag1 (strings, ...valores){
+    return strings.raw[0];
+}
+
+console.log( tag1 `linha 1 \nlinha 2`)
