@@ -7,7 +7,7 @@ let str2 = "completou "
 let str3 = " anos e pesa "
 let str4 = " kg."
 
-// Interpolação de expressões utilizando concatenação
+// Concatenação
 console.log(str1 + nome + str2 + idade + str3 + peso + str4)
 
 // Interpolação de expressões utilizando templates

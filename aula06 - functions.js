@@ -1,15 +1,22 @@
-// FUNÇÃO PADRÃO
+// FUNÇÕES
+
+// Declaração padrão de funções
 function nomeFn1() { console.log("Fn1 - padrão")}
 nomeFn1();
-// FUNÇÃO PADRÃO - SEM PARÂMETROS
+
+// Declaração usando a forma literal
+function nomeFn0(value) {return value}  // Declaração padrão
+let nomeFn0 = new Function("value", "return value") // Declaração na forma literal
+
+// Função sem parâmetros
 function nomeFn2() { console.log("Fn2 - sem parâmetros")}
 nomeFn2();
 
-// FUNÇÃO PADRÃO - COM MESMA QUANTIDADE DE PARÂMETROS
+// Função com parâmetros
 function nomeFn3(a,b) { console.log(`Fn3 - Função com parâmetros: A = ${a} e  B = ${b}`)}
 nomeFn3(2,3);
 
-// FUNÇÃO PADRÃO - COM  INICIALIZADOS PARÂMETROS
+// Função com inicialização de parâmetros, definindo valores padrões para o mesmo
 function nomeFn4(a=1,b=2){console.log(`Fn4 - Função com inicialização de parâmetros: A = ${a} e  B = ${b}`)}
 nomeFn4();
 nomeFn4(5,6);

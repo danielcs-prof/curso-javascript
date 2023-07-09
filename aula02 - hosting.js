@@ -1,6 +1,6 @@
 /* HOSTING */
 
-variavel = 2;     // Utilizou a variavel antes de declar
+variavel = 2;     // Utilizou a variavel antes de declarar
 var variavel;   // Declaração da variável
 console.log(variavel)   // Imprime 2
 
