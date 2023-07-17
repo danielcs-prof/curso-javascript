@@ -11,8 +11,10 @@ b1 = false
 
 // 3 - Number
 x0 = 1
-x1 = 3.14
+x1 = 3.123456789
 console.log( typeof x0 + ': '+ x0 + ', ' + x1)
+console.log( 'Precisão: '+ x1.toFixed(2))
+console.log('Valor máximo: '+ Number.MAX_VALUE)
 
 // 4 - NaN
 w = str0/5
@@ -21,6 +23,7 @@ console.log( typeof w + ': ' + w+' - Not a Number')
 // 5 - +/- Infinity 
 i = 100/0
 console.log(typeof i + ': ' + i)
+console.log('Infy positivo: '+Number.POSITIVE_INFINITY + 'Infy negativo: '+Number.NEGATIVE_INFINITY)
 
 // 6 - Undefined - valor de variável não atribuida
 var x; 
