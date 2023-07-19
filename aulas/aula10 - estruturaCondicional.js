@@ -66,3 +66,6 @@ switch(opcao){
 : 2>1? 
     console.log('Ternario aninhado if - verdadeiro')
     : console.log('Ternario aninhado if - verdadeiro')
+
+valor = 1 < 10? 10: 1 // atribuicão com condição
+console.log(valor)
