@@ -31,13 +31,20 @@ nomeFn6(1)
 
 // FUNÇÃO PADRÃO - ARGUMENTS
 function nomeFnArguments(){
-
+    console.log('Função utilizando Arguments - Listando os arguments')
     //console.log(arguments) // imprime todos argumentos
     for (e of arguments){
         console.log(arguments[e])
     }
 }
+// ou Espalhamento (...) Operador Rest
+function nomeFnEspalhamento( ...dados){
+    for (e of dados){
+        console.log(e)
+    }
+}
 nomeFnArguments(1,2,3,4,5)
+nomeFnEspalhamento(1,2,3,4)
 
 // FUNÇÃO PADRÃO - COM RETORNO DE VALORES
 function nomeFn7(a,b){ return `Fn7 - Função com retorno de valores: ${a} + ${b} = ${a+b}`}
@@ -53,3 +60,9 @@ console.log(nomeFn8(2)(3,4));
 let nomeFn9 = function(a,b){ return `Fn expressão de função / função anônima - Soma: ${a} + ${b} = ${a+b}`}
 console.log( nomeFn9(2,3) );
 console.log(typeof nomeFn9)
+
+// Função auto-invocavel
+// funções de escopo global
+// (function (){
+//     console.log("Função auto invocável")
+// })()
