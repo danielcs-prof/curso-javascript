@@ -1,3 +1,5 @@
+// EXEMPLO DE FLUXO DE 
+
 function fn1(){
     console.log('Fn01');
 }
