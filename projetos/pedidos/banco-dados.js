@@ -10,7 +10,7 @@ export let str0 = ['Ana', 'Bruno', 'Carolina','Daniel','Eliane']
 export const statusPedido = ['concluido','cancelado']
 export let totalizadoresEstatistica = []    // Total Receita | Total Pedidos | Total Clientes
 
-export let cliente = [
+export let clientes = [
     {id:1,nome:'Ana Flavia', cpf:'001.999.999-99',email:'usuario-1@dominio.com'},
     {id:2,nome:'Bruno Pedrosa', cpf:'002.999.999-99',email:'usuario-2@dominio.com'},
     {id:3,nome:'Caroline Maia', cpf:'003.999.999-99',email:'usuario-3@dominio.com'},

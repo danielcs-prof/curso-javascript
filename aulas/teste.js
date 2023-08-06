@@ -1,13 +1,22 @@
-function fn1(){
-    console.log('Fn01');
-}
-function fn2(){
-    setTimeout(()=>{console.log('Fn02')},1000);
-}
-function fn3(){
-    console.log('Fn03');
-}
+// Convertendo JSON
+// Array de objetos clientes
+let clientes = [
+    {id:1,nome:'Ana Flavia', cpf:'001.999.999-99',email:'usuario-1@dominio.com'},
+    {id:2,nome:'Bruno Pedrosa', cpf:'002.999.999-99',email:'usuario-2@dominio.com'},
+    {id:3,nome:'Caroline Maia', cpf:'003.999.999-99',email:'usuario-3@dominio.com'},
+    {id:4,nome:'Daniel Corrêa da Silva', cpf:'004.999.999-99',email:'usuario-4@dominio.com'}
+]
 
-fn1() // primeiro a ser impresso
-fn2() // terceiro a ser impresso
-fn3() // segundo a ser impresso
+// Convertendo JSON => String
+// json =  JSON.stringify(clientes)    // Conversão de objetos para sting
+// console.log(typeof json)
+// console.log(json)
+// Convertendo JSON => String
+// json = '[{"id":1,"nome":"Ana Flavia","cpf":"001.999.999-99","email":"usuario-1@dominio.com"},{"id":2,"nome":"Bruno Pedrosa","cpf":"002.999.999-99","email":"usuario-2@dominio.com"},{"id":3,"nome":"Caroline Maia","cpf":"003.999.999-99","email":"usuario-3@dominio.com"},{"id":4,"nome":"Daniel Corrêa da Silva","cpf":"004.999.999-99","email":"usuario-4@dominio.com"}]'
+json = JSON.stringify(clientes)
+console.log(typeof json)
+console.log(json)
+
+ArrayObj = JSON.parse(json)
+console.log(typeof ArrayObj)
+console.log(ArrayObj)
