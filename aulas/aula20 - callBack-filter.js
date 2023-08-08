@@ -10,6 +10,13 @@ let compras = [
     {produto:'Produto-05',qt:5,precoUnit:5.4,subtotal:0},
 ]
 
+let clientes = [
+    {nome:'Ana Flavia', sexo:'F', idade: 30 },
+    {nome:'Bruno Pedrosa', sexo:'M', idade: 21 },
+    {nome:'Caroline Maia', sexo:'F', idade: 17 },
+    {nome:'Daniel Corrêa da Silva', sexo:'M', idade: 40 }
+]
+
 // Funções CallBack para Filtros
 const fn1 = (e) => e < 5
 const fn2 = (e) => e >= 5  // elemento, posicao, tamanho-vetor
@@ -48,3 +55,14 @@ Array.prototype.meuFilter = function(fn){
     return vetorResultado
 }
 console.log("\nPrototype-filter:\n" + compras.meuFilter(fn3))
+
+// Filtrando informações sobre os clientes
+// Funções callback para clientes
+
+const filtCliente1 = (cliente) => cliente.sexo === "M"
+const filtCliente2 = (cliente) => cliente.sexo === "M" && cliente.idade>=40
+
+resp = clientes.filter(filtCliente1)
+console.log(resp)
+resp = clientes.filter(filtCliente2)
+console.log(resp)

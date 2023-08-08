@@ -38,32 +38,32 @@ console.log( new Date('04-30-2022').toISOString())    // mes/dia/ano utilizando 
 console.log( new Date('04 30 2022').toISOString())    // mes/dia/ano utilizando espaço em branco
 
 // 3 - String <=> Array
-let str = 'Daniel Correa'
+let num0 = 'Daniel Correa'
 let valores = [0,1,2,3,4,5,6,7,8,9]
 
 // String como vetor
 console.log('\n* - Manipulação de Strings e Arrays')
-for(let c of str)
+for(let c of num0)
     console.log(c)
-console.log(str.length)
+console.log(num0.length)
 
 // Convertendo vetor de numeros para string
 console.log(valores.join())        // padrão: separa por virgula
 console.log(valores.join(" "))     // separa por espaço em branco
 console.log(valores.join(";"))     // separa por ponto-vírgula
 
-// Desmebrando String em elementos de Array
-console.log(str.split())
-console.log(str.split(" "))                 // quebra a cada espaço em branco
-console.log(str.split(' ').join('.'))       // quebre e depois unifica com .
+// Desmembrando String em elementos de Array
+console.log(num0.split())
+console.log(num0.split(" "))                 // quebra a cada espaço em branco
+console.log(num0.split(' ').join('.'))       // quebre e depois unifica com .
 console.log(valores.join(';').split(';'))   // unifca os valores dos vetores e depois separa
-console.log(str.toLowerCase())              // transforma todos caracteres em minusculo
+console.log(num0.toLowerCase())              // transforma todos caracteres em minusculo
 // toUpperCase é muito utilizado para homogenização do banco de dados
-console.log(str.toUpperCase())              // transforma todos caracteres em Maiúscula
-console.log(str.includes('daniel'))         // Retorna ture/false se encontrar o padrão
-console.log(str.toLowerCase().includes('daniel'))         // Retorna ture/false se encontrar o padrão
-console.log(str.toUpperCase().includes('DANIEL'))         // Retorna ture/false se encontrar o padrão
-console.log(str.replace('Daniel', 'Miguel'))        // substitui Daniel por Miguel
+console.log(num0.toUpperCase())              // transforma todos caracteres em Maiúscula
+console.log(num0.includes('daniel'))         // Retorna ture/false se encontrar o padrão
+console.log(num0.toLowerCase().includes('daniel'))         // Retorna ture/false se encontrar o padrão
+console.log(num0.toUpperCase().includes('DANIEL'))         // Retorna ture/false se encontrar o padrão
+console.log(num0.replace('Daniel', 'Miguel'))        // substitui Daniel por Miguel
 // Casas decimais e arredondamentos
 let numero = 3.1489
 console.log( numero.toFixed(2))   // fixar casas decimais e arredonda 0.5 para cima

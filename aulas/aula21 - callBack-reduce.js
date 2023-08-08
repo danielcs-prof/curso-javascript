@@ -34,3 +34,13 @@ console.log( compras.map(filtProduto).reduce(fn6,0) )   // total de qt
 console.log( compras.map(filtProduto).reduce(fn7,0) )   // total de precoUnit 
 console.log( compras.map(filtProduto).reduce(fn8,0) )   // total subtotal
 console.log('Totalizadores:\n')
+
+// Totalizadores
+let num = [2,2,2,2,2]
+const totalNum = (total,e, indice, vetor) => total + e / vetor.length
+let totalQt = (total,produto,index,vetor) => total + produto.qt / vetor.length 
+const resp1 = num.reduce(totalNum,0)
+console.log(resp1)
+const resp2 = compras.reduce(totalQt,0)
+console.log(resp2)
+

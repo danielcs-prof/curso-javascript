@@ -50,3 +50,21 @@ Array.prototype.meuMap = function(fn){
 }
 
 console.log( compras.meuMap(fn5))
+
+// Conversao de temperaturas
+const tempF = [300,303,302]
+const conversaoFC = (tempFa) => Math.round( ( (tempFa - 32)* 5 )/9)
+const tempC = tempF.map(conversaoFC)
+const tbTemp = [[tempF],[tempC]]
+console.table(tbTemp)
+
+// Convertendo nomes de clientes para maiúscula
+let clientes = [
+    {nome:'Ana Flavia', sexo:'F', idade: 30 },
+    {nome:'Bruno Pedrosa', sexo:'M', idade: 21 },
+    {nome:'Caroline Maia', sexo:'F', idade: 17 },
+    {nome:'Daniel Corrêa da Silva', sexo:'M', idade: 40 }
+]
+const processaNome = (cliente) => cliente.nome.toUpperCase()
+const resp = clientes.map(processaNome)
+console.log(resp)
