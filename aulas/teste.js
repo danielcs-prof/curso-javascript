@@ -1,18 +1,43 @@
-// Convertendo JSON
-// Array de objetos clientes
-let clientes = [
-    {id:1,nome:'Ana Flavia', cpf:'001.999.999-99',email:'usuario-1@dominio.com'},
-    {id:2,nome:'Bruno Pedrosa', cpf:'002.999.999-99',email:'usuario-2@dominio.com'},
-    {id:3,nome:'Caroline Maia', cpf:'003.999.999-99',email:'usuario-3@dominio.com'},
-    {id:4,nome:'Daniel Corrêa da Silva', cpf:'004.999.999-99',email:'usuario-4@dominio.com'}
-]
+const fs = require('fs')
+const path = require('path')
+const { json } = require('stream/consumers')
 
-// Convertendo JSON => String
-json = JSON.stringify(clientes)
-console.log(typeof json)
-console.log(json)
+const pathArquivo = path.join(__dirname,'db-persons.json')
+const pathEscrita = path.join(__dirname,'dados.json')
+console.log(pathEscrita)
 
-// Convertendo JSON => String
-ArrayObj = JSON.parse(json)
-console.log(typeof ArrayObj)
-console.log(ArrayObj)
+function taskReadFile(caminho){
+
+    return new Promise( (resolve,reject) => {
+            let dados = fs.readFile(caminho,'utf-8', (erro,dados) => {
+            erro ? reject( new Error(erro) ) : resolve( dados)
+        })
+    })
+}
+function taskWriteFile(caminho,dadosParaGravar){
+
+    return new Promise( (resolve,reject) => {
+        fs.writeFile(caminho, dadosParaGravar, (erro) => {
+        if (erro) 
+            throw new Error('Falha - erro durane a gravação do arquivo')
+        })
+    })
+}
+
+const p1 = taskReadFile(pathArquivo)
+.then(dados => {
+    vetor = []
+    dados = JSON.parse(dados)
+    for(let i in dados){
+        vetor.push({"id":dados[i].id,"nome":dados[i].name})
+    }
+    return vetor
+})
+.then( dados => {
+    dados = JSON.stringify(dados)
+    fs.writeFile(pathEscrita, dados, (erro) => {
+    if (erro) 
+        throw new Error('Falha - erro durane a gravação do arquivo')
+    })
+})
+.catch(erro => console.log(erro) )

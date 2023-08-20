@@ -67,4 +67,5 @@ let clientes = [
 ]
 const processaNome = (cliente) => cliente.nome.toUpperCase()
 const resp = clientes.map(processaNome)
+clientes.map((e)=>{e.nome})
 console.log(resp)
